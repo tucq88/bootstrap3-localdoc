@@ -5,8 +5,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 
 <title>
   
@@ -109,6 +110,7 @@
 
 
     <div class="container bs-docs-container">
+
       <div class="row">
         <div class="col-md-3">
           <div class="bs-sidebar hidden-print" role="complementary">
@@ -210,7 +212,7 @@
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox" checked value="buttons.less">
+            <input type="checkbox" checked value="buttons.less" data-dependents="button-groups.less">
             Buttons
           </label>
         </div>
@@ -338,6 +340,12 @@
         <h3>JavaScript components</h3>
         <div class="checkbox">
           <label>
+            <input type="checkbox" checked value="component-animations.less">
+            Component animations (for JS)
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
             <input type="checkbox" checked value="dropdowns.less">
             Dropdowns
           </label>
@@ -378,12 +386,6 @@
           <label>
             <input type="checkbox" checked value="responsive-utilities.less">
             Responsive utilities
-          </label>
-        </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" checked value="component-animations.less">
-            Component animations (for JS)
           </label>
         </div>
       </div><!-- .col-xs-6 .col-sm-4 -->
@@ -553,7 +555,7 @@
         <input type="text" class="form-control" placeholder="Georgia, 'Times New Roman', Times, serif" data-var="@font-family-serif">
         <p class="help-block">Default serif fonts.</p>
         <label>@font-family-monospace</label>
-        <input type="text" class="form-control" placeholder="Monaco, Menlo, Consolas, 'Courier New', monospace" data-var="@font-family-monospace">
+        <input type="text" class="form-control" placeholder="Menlo, Monaco, Consolas, 'Courier New', monospace" data-var="@font-family-monospace">
         <p class="help-block">Default monospace fonts for <code>&lt;code&gt;</code> and <code>&lt;pre&gt;</code>.</p>
 
         <h4>Base type styes</h4>
@@ -590,7 +592,7 @@
     <div class="row">
       <div class="col-lg-6">
         <label>@headings-font-family</label>
-        <input type="text" class="form-control" placeholder="@font-family-base" data-var="@headings-font-family">
+        <input type="text" class="form-control" placeholder="inherit" data-var="@headings-font-family">
         <label>@headings-font-weight</label>
         <input type="text" class="form-control" placeholder="500" data-var="@headings-font-weight">
       </div>
@@ -1210,7 +1212,7 @@
         <p class="help-block">Hovered dropdown menu entry text color</p>
         <label>@dropdown-link-hover-bg</label>
         <input type="text" class="form-control" placeholder="#f5f5f5" data-var="@dropdown-link-hover-bg">
-        <p class="help-block">Hovered dropdown menu entry text color</p>
+        <p class="help-block">Hovered dropdown menu entry background color</p>
 
         <label>@dropdown-link-active-color</label>
         <input type="text" class="form-control" placeholder="@component-active-color" data-var="@dropdown-link-active-color">
@@ -1301,6 +1303,8 @@
     <h3>Wells</h3>
     <label>@well-bg</label>
     <input type="text" class="form-control" placeholder="#f5f5f5" data-var="@well-bg">
+    <label>@well-border</label>
+    <input type="text" class="form-control" placeholder="darken(@well-bg, 7%)" data-var="@well-border">
 
 
     <h2 id="variables-accordion">Accordion</h2>
@@ -1400,6 +1404,11 @@
         <label>@modal-backdrop-bg</label>
         <input type="text" class="form-control" placeholder="#000" data-var="@modal-backdrop-bg">
         <p class="help-block">Modal backdrop background color</p>
+      </div>
+      <div class="col-md-4">
+        <label>@modal-backdrop-opacity</label>
+        <input type="text" class="form-control" placeholder=".5" data-var="@modal-backdrop-opacity">
+        <p class="help-block">Modal backdrop opacity</p>
       </div>
     </div>
 
@@ -1896,9 +1905,10 @@
 
 
         <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
-        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Maintained by the <a href="https://github.com/twbs?tab=members">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+        <p>Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
-          <li>Currently v3.0.1</li>
+          <li>Currently v3.1.0</li>
           <li class="muted">&middot;</li>
           <li><a href="../2.3.2/">Bootstrap 2.3.2 docs</a></li>
           <li class="muted">&middot;</li>
@@ -1915,22 +1925,27 @@
     <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="../dist/js/bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
 
-<script src="http://platform.twitter.com/widgets.js"></script>
 <script src="../docs-assets/js/holder.js"></script>
 
 <script src="../docs-assets/js/application.js"></script>
 
 
-<script src="../docs-assets/js/less.js"></script>
-<script src="../docs-assets/js/jszip.js"></script>
-<script src="../docs-assets/js/uglify.js"></script>
-<script src="../docs-assets/js/filesaver.js"></script>
 <script src="../docs-assets/js/raw-files.js"></script>
-<script src="../docs-assets/js/customizer.js"></script>
+<script src="../docs-assets/js/customize.js"></script>
 
+
+
+<script>
+  window.twttr = (function (d,s,id) {
+    var t, js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
+    js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+    return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+  }(document, "script", "twitter-wjs"));
+</script>
 
 <!-- Analytics
 ================================================== -->

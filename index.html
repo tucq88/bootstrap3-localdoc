@@ -5,8 +5,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 
 <title>
   
@@ -93,8 +94,8 @@
     <h1>Bootstrap</h1>
     <p class="lead">Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
     <p>
-      <a href="https://github.com/twbs/bootstrap/releases/download/v3.0.1/bootstrap-3.0.1-dist.zip" class="btn btn-outline-inverse btn-lg" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 3.0.1']);">Download Bootstrap</a>
-      <a href="https://github.com/twbs/bootstrap/archive/v3.0.1.zip" class="btn btn-outline-inverse btn-lg" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 3.0.1']);">Download source</a>
+      <a href="https://github.com/twbs/bootstrap/releases/download/v3.1.0/bootstrap-3.1.0-dist.zip" class="btn btn-outline-inverse btn-lg" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 3.1.0']);">Download Bootstrap</a>
+      <a href="https://github.com/twbs/bootstrap/archive/v3.1.0.zip" class="btn btn-outline-inverse btn-lg" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 3.1.0']);">Download source</a>
     </p>
   </div>
 </main>
@@ -124,7 +125,7 @@
 
       <ul class="bs-masthead-links">
         <li class="current-version">
-          Currently v3.0.1
+          Currently v3.1.0
         </li>
         <li>
           <a href="./2.3.2/">Bootstrap 2.3.2 docs</a>
@@ -148,15 +149,24 @@
     <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="./dist/js/bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="./dist/js/bootstrap.min.js"></script>
 
-<script src="http://platform.twitter.com/widgets.js"></script>
 <script src="./docs-assets/js/holder.js"></script>
 
 <script src="./docs-assets/js/application.js"></script>
 
 
+
+
+<script>
+  window.twttr = (function (d,s,id) {
+    var t, js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
+    js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+    return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+  }(document, "script", "twitter-wjs"));
+</script>
 
 <!-- Analytics
 ================================================== -->
